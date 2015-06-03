@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 
+#import "BasicViewController.h"
+
+#import "Test_ViewController_Demo.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +21,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    /**/
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    /**/
+    self.window.backgroundColor = [UIColor blackColor];
+    
+    /**/
+    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault];
+    
+    Test_ViewController_Demo *test = [[Test_ViewController_Demo alloc] init];
+    
+    self.window.rootViewController = test;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
