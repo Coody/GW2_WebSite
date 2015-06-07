@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		70CFDCFCD2BB5A106B8CB658 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B8C9E4E6E7887EA6C7768A /* libPods.a */; };
+		FB8737211B24D2CC005F1B55 /* WebApi.m in Sources */ = {isa = PBXBuildFile; fileRef = FB87371E1B24D2CC005F1B55 /* WebApi.m */; };
+		FB8737221B24D2CC005F1B55 /* WebSiteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8737201B24D2CC005F1B55 /* WebSiteHelper.m */; };
+		FB8737251B24D378005F1B55 /* GW2_WebApi_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8737241B24D378005F1B55 /* GW2_WebApi_Gems.m */; };
+		FB8737281B24D60A005F1B55 /* GW2_Request_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8737271B24D60A005F1B55 /* GW2_Request_Gems.m */; };
 		FB8F97181B1F46E900E1DD28 /* Test_ViewController_Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8F97171B1F46E900E1DD28 /* Test_ViewController_Demo.m */; };
 		FBF94AE41B1F23E4005E3D45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF94AE31B1F23E4005E3D45 /* main.m */; };
 		FBF94AE71B1F23E4005E3D45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF94AE61B1F23E4005E3D45 /* AppDelegate.m */; };
@@ -15,7 +19,6 @@
 		FBF94AEF1B1F23E4005E3D45 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF94AEE1B1F23E4005E3D45 /* Images.xcassets */; };
 		FBF94AF21B1F23E4005E3D45 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF94AF01B1F23E4005E3D45 /* LaunchScreen.xib */; };
 		FBF94AFE1B1F23E4005E3D45 /* WebSiteForGW2TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF94AFD1B1F23E4005E3D45 /* WebSiteForGW2TestTests.m */; };
-		FBF94B0B1B1F24E8005E3D45 /* WebSiteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF94B0A1B1F24E8005E3D45 /* WebSiteHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,14 @@
 /* Begin PBXFileReference section */
 		41E9F89DC9488AA8D951CDA4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		42B8C9E4E6E7887EA6C7768A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB87371D1B24D2CC005F1B55 /* WebApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebApi.h; path = ../../GW2WebsiteBase/WebApi.h; sourceTree = "<group>"; };
+		FB87371E1B24D2CC005F1B55 /* WebApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebApi.m; path = ../../GW2WebsiteBase/WebApi.m; sourceTree = "<group>"; };
+		FB87371F1B24D2CC005F1B55 /* WebSiteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSiteHelper.h; path = ../../GW2WebsiteBase/WebSiteHelper.h; sourceTree = "<group>"; };
+		FB8737201B24D2CC005F1B55 /* WebSiteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebSiteHelper.m; path = ../../GW2WebsiteBase/WebSiteHelper.m; sourceTree = "<group>"; };
+		FB8737231B24D378005F1B55 /* GW2_WebApi_Gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_WebApi_Gems.h; sourceTree = "<group>"; };
+		FB8737241B24D378005F1B55 /* GW2_WebApi_Gems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_WebApi_Gems.m; sourceTree = "<group>"; };
+		FB8737261B24D60A005F1B55 /* GW2_Request_Gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GW2_Request_Gems.h; sourceTree = "<group>"; };
+		FB8737271B24D60A005F1B55 /* GW2_Request_Gems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_Request_Gems.m; sourceTree = "<group>"; };
 		FB8F97161B1F46E900E1DD28 /* Test_ViewController_Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_ViewController_Demo.h; path = TestViewController/Test_ViewController_Demo.h; sourceTree = "<group>"; };
 		FB8F97171B1F46E900E1DD28 /* Test_ViewController_Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_ViewController_Demo.m; path = TestViewController/Test_ViewController_Demo.m; sourceTree = "<group>"; };
 		FBF94ADE1B1F23E4005E3D45 /* WebSiteForGW2Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSiteForGW2Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,8 +56,6 @@
 		FBF94AF71B1F23E4005E3D45 /* WebSiteForGW2TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebSiteForGW2TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF94AFC1B1F23E4005E3D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBF94AFD1B1F23E4005E3D45 /* WebSiteForGW2TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebSiteForGW2TestTests.m; sourceTree = "<group>"; };
-		FBF94B091B1F24E8005E3D45 /* WebSiteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSiteHelper.h; path = ../../WebSiteHelper.h; sourceTree = "<group>"; };
-		FBF94B0A1B1F24E8005E3D45 /* WebSiteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebSiteHelper.m; path = ../../WebSiteHelper.m; sourceTree = "<group>"; };
 		FD4CBEDF1DB3E3F430403B5F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +93,35 @@
 				41E9F89DC9488AA8D951CDA4 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB87371A1B24D22F005F1B55 /* GW2WebApi */ = {
+			isa = PBXGroup;
+			children = (
+				FB8737231B24D378005F1B55 /* GW2_WebApi_Gems.h */,
+				FB8737241B24D378005F1B55 /* GW2_WebApi_Gems.m */,
+			);
+			name = GW2WebApi;
+			sourceTree = "<group>";
+		};
+		FB87371B1B24D25D005F1B55 /* GW2Request */ = {
+			isa = PBXGroup;
+			children = (
+				FB8737261B24D60A005F1B55 /* GW2_Request_Gems.h */,
+				FB8737271B24D60A005F1B55 /* GW2_Request_Gems.m */,
+			);
+			name = GW2Request;
+			sourceTree = "<group>";
+		};
+		FB87371C1B24D2B7005F1B55 /* GW2WebsiteBase */ = {
+			isa = PBXGroup;
+			children = (
+				FB87371D1B24D2CC005F1B55 /* WebApi.h */,
+				FB87371E1B24D2CC005F1B55 /* WebApi.m */,
+				FB87371F1B24D2CC005F1B55 /* WebSiteHelper.h */,
+				FB8737201B24D2CC005F1B55 /* WebSiteHelper.m */,
+			);
+			name = GW2WebsiteBase;
 			sourceTree = "<group>";
 		};
 		FB8F97151B1F3E4700E1DD28 /* TestViewController */ = {
@@ -160,8 +198,9 @@
 		FBF94B071B1F24AB005E3D45 /* WebSite */ = {
 			isa = PBXGroup;
 			children = (
-				FBF94B091B1F24E8005E3D45 /* WebSiteHelper.h */,
-				FBF94B0A1B1F24E8005E3D45 /* WebSiteHelper.m */,
+				FB87371C1B24D2B7005F1B55 /* GW2WebsiteBase */,
+				FB87371A1B24D22F005F1B55 /* GW2WebApi */,
+				FB87371B1B24D25D005F1B55 /* GW2Request */,
 			);
 			name = WebSite;
 			sourceTree = "<group>";
@@ -212,7 +251,7 @@
 		FBF94AD61B1F23E4005E3D45 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = Test_;
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = CoodyChou;
 				TargetAttributes = {
@@ -301,10 +340,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8737281B24D60A005F1B55 /* GW2_Request_Gems.m in Sources */,
 				FBF94AEA1B1F23E4005E3D45 /* BasicViewController.m in Sources */,
-				FBF94B0B1B1F24E8005E3D45 /* WebSiteHelper.m in Sources */,
+				FB8737221B24D2CC005F1B55 /* WebSiteHelper.m in Sources */,
 				FBF94AE71B1F23E4005E3D45 /* AppDelegate.m in Sources */,
 				FBF94AE41B1F23E4005E3D45 /* main.m in Sources */,
+				FB8737211B24D2CC005F1B55 /* WebApi.m in Sources */,
+				FB8737251B24D378005F1B55 /* GW2_WebApi_Gems.m in Sources */,
 				FB8F97181B1F46E900E1DD28 /* Test_ViewController_Demo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
