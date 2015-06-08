@@ -10,7 +10,7 @@ GW2 的 iOS WebApi 相關
 return @"/commerce/exchange/gems";
 }
 
-2. WebApi 請建立自己處理玩要的 Result，命名原則通常回 className_Result 來接收資料。
+2. WebApi 請建立自己處理完要的 Result，命名原則通常為 className_Result 來接收資料。
 
 3. Key 請建立出來讓使用此 WebApi 的人知道有哪些 Key。
 

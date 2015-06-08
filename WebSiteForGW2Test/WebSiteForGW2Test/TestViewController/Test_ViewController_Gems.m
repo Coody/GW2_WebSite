@@ -37,7 +37,7 @@
     
     // 顯示介面
     [self createLabelWithText:@"輸入 Gems"];
-    [self createTextFieldWithDefaultText:@"10000"];
+    [self createTextFieldWithDefaultText:@"100"];
     [self endAdd];
     
     // 處理 Request
