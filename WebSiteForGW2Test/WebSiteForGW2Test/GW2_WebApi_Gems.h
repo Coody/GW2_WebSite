@@ -7,19 +7,22 @@
 //
 /*
  send:
- https://api.guildwars2.com/v2/commerce/exchange/coins?quantity=100000
+ https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=100
  back:
- {"coins_per_gem":1851,"quantity":54}
+ {"coins_per_gem":1340,"quantity":134015}
  */
-
 
 #import "WebApi.h"
 
+extern NSString *const GW2_KEY_Coins_Per_Gem;
+extern NSString *const GW2_KEY_Quantity;
 
 #pragma mark - Response Result
 @interface GW2_WebApi_Gems_Result:NSObject
 
+/***/
 @property (nonatomic , strong) NSNumber *coinsPerGem;
+/***/
 @property (nonatomic , strong) NSNumber *quantity;
 
 @end
@@ -27,6 +30,7 @@
 #pragma mark -
 @interface GW2_WebApi_Gems : WebApi < WebApi_Policy >
 
-+(GW2_WebApi_Gems_Result *)parserResponse:(NSData *)responseData;
++(NSDictionary *)getGems:(NSInteger)tempGems;
++(GW2_WebApi_Gems_Result *)parserResponse:(id)responseData;
 
 @end

@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol BaseViewController_Protocol <NSObject>
+
+@required
+-(void)pressedButtonSend:(NSArray *)sender;
+
+@end
+
 /**
  * @brief   - 建立測試用的 view 的基本 ViewController
  * @details - 直接繼承後使用
@@ -17,6 +24,7 @@
  */
 @interface BasicViewController : UIViewController
 
+@property (nonatomic , weak) id < BaseViewController_Protocol > delegate;
 
 /**
  * @brief   - 建立排序的 UILabel（ 一個 label + 一個 textField ）
@@ -37,6 +45,13 @@
  * @details - 會重新整理畫面並且調整 scroll view
  */
 -(void)endAdd;
+
+/** 結果，使用 UIAlertView 顯示 */
+-(void)createResultAlertWithString:(NSString *)tempString;
+
+/** 錯誤，使用 UIAlertView 顯示 error code , 以及 error message */
+-(void)createErrorResultAlertWithString:(NSString *)tempString
+                          withErrorCode:(NSInteger)tempErrorCode;
 
 @end
 

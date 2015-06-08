@@ -69,47 +69,19 @@
 
 ////////////////////////////////////////////
 #pragma mark - Request
-+(void)sendRequestWithTailUrl:(NSString *)tempTailUrl withSuccessBlock:(URLSessionDataTaskHandler)successBlock
++(void)sendRequestWithTailUrl:(NSString *)tempTailUrl
+                   withParams:(NSDictionary *)tempParams
+                    withBlock:(URLSessionDataTaskHandler)responseBlock
 {
-    [[WebSiteHelper sharedInstance] GET:tempTailUrl parameters:nil
+    [[WebSiteHelper sharedInstance] GET:tempTailUrl
+                             parameters:tempParams
                                 success:^(NSURLSessionDataTask *task, id responseObject) {
-                                    successBlock(task,responseObject);
+                                    responseBlock(task , responseObject , nil);
                                 } failure:^(NSURLSessionDataTask *task, NSError *error) {
-                                    
+                                    responseBlock(task , nil , error);
                                 }];
     
 }
-
-/** 
- * 
- */
-//+(NSURLSessionDataTask *)createTaskWithUrl:(NSString *)tempUrl
-//                             withGetOrPost:(NSString *)tempGetOrPost
-//                                withParams:(NSDictionary *)tempParams
-//                     withCompletionHandler:(URLSessionDataTaskHandler)tempCompletionHandler
-//{
-//    /**
-//     用 tempUrl 取得 request
-//     
-//     */
-//    
-//    
-//    /* 
-//     AFHTTPRequestOperation is an all-in-one class for handling HTTP transfers across the network. You tell it that the response should be read as JSON by setting the responseSerializer property to the default JSON serializer. AFNetworking will then take care of parsing the JSON for you.
-//     */
-//    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:<#(NSURLRequest *)#>];
-//    
-//}
-//
-//#pragma mark - private
-//+(NSURLRequest *)createRequestWithUrl:(NSString *)tempUrl{
-////    NSString *string = [NSString stringWithFormat:@"%@weather.php?format=json", BaseURLString];
-////    NSURL *url = [NSURL URLWithString:string];
-////    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    
-//    NSString *urlString = [NSString stringWithFormat:[tempUrl ]];
-//    
-//}
 
 @end
 

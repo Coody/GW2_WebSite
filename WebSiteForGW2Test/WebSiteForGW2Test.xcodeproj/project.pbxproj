@@ -13,6 +13,7 @@
 		FB8737251B24D378005F1B55 /* GW2_WebApi_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8737241B24D378005F1B55 /* GW2_WebApi_Gems.m */; };
 		FB8737281B24D60A005F1B55 /* GW2_Request_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8737271B24D60A005F1B55 /* GW2_Request_Gems.m */; };
 		FB8F97181B1F46E900E1DD28 /* Test_ViewController_Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8F97171B1F46E900E1DD28 /* Test_ViewController_Demo.m */; };
+		FBCA3B1B1B25ECF100AA04A3 /* Test_ViewController_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCA3B1A1B25ECF100AA04A3 /* Test_ViewController_Gems.m */; };
 		FBF94AE41B1F23E4005E3D45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF94AE31B1F23E4005E3D45 /* main.m */; };
 		FBF94AE71B1F23E4005E3D45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF94AE61B1F23E4005E3D45 /* AppDelegate.m */; };
 		FBF94AEA1B1F23E4005E3D45 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF94AE91B1F23E4005E3D45 /* BasicViewController.m */; };
@@ -44,6 +45,8 @@
 		FB8737271B24D60A005F1B55 /* GW2_Request_Gems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GW2_Request_Gems.m; sourceTree = "<group>"; };
 		FB8F97161B1F46E900E1DD28 /* Test_ViewController_Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_ViewController_Demo.h; path = TestViewController/Test_ViewController_Demo.h; sourceTree = "<group>"; };
 		FB8F97171B1F46E900E1DD28 /* Test_ViewController_Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_ViewController_Demo.m; path = TestViewController/Test_ViewController_Demo.m; sourceTree = "<group>"; };
+		FBCA3B191B25ECF100AA04A3 /* Test_ViewController_Gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_ViewController_Gems.h; sourceTree = "<group>"; };
+		FBCA3B1A1B25ECF100AA04A3 /* Test_ViewController_Gems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_ViewController_Gems.m; sourceTree = "<group>"; };
 		FBF94ADE1B1F23E4005E3D45 /* WebSiteForGW2Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSiteForGW2Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF94AE21B1F23E4005E3D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBF94AE31B1F23E4005E3D45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 			children = (
 				FB8F97161B1F46E900E1DD28 /* Test_ViewController_Demo.h */,
 				FB8F97171B1F46E900E1DD28 /* Test_ViewController_Demo.m */,
+				FBCA3B191B25ECF100AA04A3 /* Test_ViewController_Gems.h */,
+				FBCA3B1A1B25ECF100AA04A3 /* Test_ViewController_Gems.m */,
 			);
 			name = TestViewController;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBCA3B1B1B25ECF100AA04A3 /* Test_ViewController_Gems.m in Sources */,
 				FB8737281B24D60A005F1B55 /* GW2_Request_Gems.m in Sources */,
 				FBF94AEA1B1F23E4005E3D45 /* BasicViewController.m in Sources */,
 				FB8737221B24D2CC005F1B55 /* WebSiteHelper.m in Sources */,

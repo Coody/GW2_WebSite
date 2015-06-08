@@ -29,10 +29,28 @@
     return self;
 }
 
--(void)sendRequest{
-    [WebSiteHelper sendRequestWithTailUrl:[GW2_WebApi_Gems uri] withSuccessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-    }];
+-(void(^)(NSURLSessionDataTask *task, id responseObject , NSError *error))responseBlock{
+    return ^(NSURLSessionDataTask *task, id responseObject , NSError *error){
+        if ( error != nil ) {
+            // TODO: 處理錯誤
+            [_delegate gotGemsRequestFailWithErrorMsg:error.description withErrorCode:error.code];
+        }
+        else{
+            [_delegate gotGemsRequestSuccessWithDic:[GW2_WebApi_Gems parserResponse:responseObject]];
+        }
+    };
 }
+
+-(void)setGems:(NSInteger)tempGems{
+    self.params = [GW2_WebApi_Gems getGems:tempGems];
+}
+
+-(void)sendRequest{
+    [WebSiteHelper sendRequestWithTailUrl:[GW2_WebApi_Gems uri]
+                               withParams:self.params
+                                withBlock:[self responseBlock]];
+}
+
+
 
 @end

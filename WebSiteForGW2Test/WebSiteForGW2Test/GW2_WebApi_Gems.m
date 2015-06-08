@@ -8,81 +8,35 @@
 
 #import "GW2_WebApi_Gems.h"
 
+// {"coins_per_gem":1340,"quantity":134015}
+NSString *const GW2_KEY_Coins_Per_Gem = @"coins_per_gem";
+NSString *const GW2_KEY_Quantity = @"quantity";
 
 #pragma mark - 
 @implementation GW2_WebApi_Gems_Result
 @end
 
 #pragma mark -
+@interface GW2_WebApi_Gems()
+@property (nonatomic) NSUInteger gems;
+@end
+
 @implementation GW2_WebApi_Gems
 
 +(NSString *)uri{
-    return @"commerce/exchange/coins";
+    return @"commerce/exchange/gems";
 }
 
-+(NSDictionary *)params{
-    return @{@"quantity":@(100000)};
++(NSDictionary *)getGems:(NSInteger)tempGems{
+    return @{ @"quantity" : [NSNumber numberWithInteger:tempGems] };
 }
 
-+ (GW2_WebApi_Gems_Result *) parserResponse:(NSData *)responseData
++ (GW2_WebApi_Gems_Result *) parserResponse:(id)responseData
 {
     GW2_WebApi_Gems_Result *gemResult = [GW2_WebApi_Gems_Result new];
     
-    
-//    @try
-//    {
-//        NSError *error;
-//        NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&error];
-//        
-//        if (error)
-//        {
-//            reVal.detail = [error description];
-//        }
-//        else if (nil == responseDic)
-//        {
-//            reVal.detail = @"nil == responseDic";
-//        }
-//        else
-//        {
-//            NSNumber *resultCode = [responseDic objectForKey:@"ResultCode"];
-//            
-//            if (resultCode)
-//            {
-//                reVal.isParsedOK = YES;
-//                reVal.result = [resultCode intValue];
-//                
-//                reVal.resultMessage = [responseDic objectForKey:@"ResultMsg"];
-//                
-//                NSMutableArray *infos = [NSMutableArray array];
-//                NSArray *jsonArray = [responseDic objectForKey:@"Data"];
-//                for (NSDictionary *jsonObj in jsonArray)
-//                {
-//                    InApp_Product_Info *info = [InApp_Product_Info new];
-//                    
-//                    info.skuID = [jsonObj objectForKey:@"SkuId"];
-//                    info.identifier = [jsonObj objectForKey:@"Name"];
-//                    info.value = [jsonObj objectForKey:@"Value"];
-//                    info.productDescription = [jsonObj objectForKey:@"Description"];
-//                    
-//                    [infos addObject:info];
-//                }
-//                
-//                if ([infos count])
-//                {
-//                    reVal.infos = [infos copy];
-//                }
-//            }
-//            else
-//            {
-//                reVal.detail = @"nil == resultCode";
-//            }
-//        }
-//    }
-//    @catch (NSException *exception)
-//    {
-//        reVal.isParsedOK = NO;
-//        reVal.detail = exception.description;
-//    }
+    gemResult.coinsPerGem = [responseData objectForKey:GW2_KEY_Coins_Per_Gem];
+    gemResult.quantity = [responseData objectForKey:GW2_KEY_Quantity];
     
     return gemResult;
 }

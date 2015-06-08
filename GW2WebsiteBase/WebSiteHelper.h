@@ -17,7 +17,7 @@
 extern NSString *const httpGet;
 extern NSString *const httpPost;
 
-typedef void(^URLSessionDataTaskHandler)(NSURLSessionDataTask *task, id responseObject);
+typedef void(^URLSessionDataTaskHandler)(NSURLSessionDataTask *task, id responseObject , NSError *error);
 
 @protocol WeatherHTTPClientDelegate;
 
@@ -25,24 +25,23 @@ typedef void(^URLSessionDataTaskHandler)(NSURLSessionDataTask *task, id response
 
 @property (nonatomic, weak) id <WeatherHTTPClientDelegate> delegate;
 
-//+(NSURLSessionDataTask *)createTaskWithUrl:(NSString *)tempUrl
-//                             withGetOrPost:(NSString *)tempGetOrPost
-//                                withParams:(NSDictionary *)tempParams
-//                     withCompletionHandler:(URLSessionDataTaskHandler)tempCompletionHandler;
-
 +(NSString *)getGW2_V1_Url;
 
 +(NSString *)getGW2_V2_Url;
 
 +(WebSiteHelper *)sharedInstance;
 
-+(void)sendRequestWithTailUrl:(NSString *)tempTailUrl withSuccessBlock:(URLSessionDataTaskHandler)successBlock;
++(void)sendRequestWithTailUrl:(NSString *)tempTailUrl
+                   withParams:(NSDictionary *)tempParams
+                    withBlock:(URLSessionDataTaskHandler)responseBlock;
 
 @end
 
 
 #pragma mark - WebSiteRequest
 @interface WebSiteRequest : NSObject
+
+@property (nonatomic, strong) NSDictionary* params;
 
 /** 送出請求 */
 - (void) sendRequest;

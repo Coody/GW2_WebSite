@@ -13,7 +13,6 @@
  */
 @protocol WebApi_Policy <NSObject>
 
-
 @required
 
 /**
@@ -23,24 +22,10 @@
  */
 +(NSString *)uri;
 
-/**
- * @brief   - 有參數要帶入的話，請寫成字典形式
- * @details - exp: .../v2/quaggans?ids=hat ，請寫成
- * @details - return @{ @"id" : @"hat" };
- * @details - exp2: .../v2/quaggans?ids=hat,box ，請寫成
- * @details - return @{ @"id": @[ @"hat" , @"box" ] };
- * @warning - 此方法只能實作「字典內包含陣列」，如果字典內包含字典，會錯誤！
- */
-+(NSDictionary *)params;
-
-
 @end
 
 @interface WebApi : NSObject
 
 +(NSString *)getGW2_Tail_Request_Url_WithClass:(Class <WebApi_Policy> )tempClass;
-
-+(NSString *)getGW2_Tail_Request_Url_WithClass:(Class <WebApi_Policy> )tempClass
-                             withSpecialPolicy:(id)tempParams;
 
 @end

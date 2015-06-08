@@ -8,7 +8,7 @@
 
 #import "Test_ViewController_Demo.h"
 
-@interface Test_ViewController_Demo ()
+@interface Test_ViewController_Demo () <BaseViewController_Protocol>
 
 @end
 
@@ -26,30 +26,24 @@
     [self createLabelWithText:@"這是測試範例"];
     [self createTextFieldWithDefaultText:@"Test"];
     
-    [self createLabelWithText:@"這是測試範例"];
-    [self createTextFieldWithDefaultText:@"Test"];
+    [self createLabelWithText:@"1.請繼承此 ViewController"];
+    [self createTextFieldWithDefaultText:@""];
     
-    [self createLabelWithText:@"這是測試範例"];
-    [self createTextFieldWithDefaultText:@"Test"];
+    [self createLabelWithText:@"2.請直接使用方法 create Label"];
+    [self createTextFieldWithDefaultText:@""];
     
-    [self createLabelWithText:@"這是測試範例"];
-    [self createTextFieldWithDefaultText:@"Test"];
+    [self createLabelWithText:@"3.請直接使用方法 create TextField"];
+    [self createTextFieldWithDefaultText:@""];
     
-    [self createLabelWithText:@"這是測試範例"];
-    [self createTextFieldWithDefaultText:@"Test"];
+    [self createLabelWithText:@"4.請實作 pressedButtonSend:"];
+    [self createTextFieldWithDefaultText:@"ps:參數為 UITextField 的 Array"];
     
-    [self createLabelWithText:@"這是測試範例"];
-    [self createTextFieldWithDefaultText:@"Test"];
+    [self createLabelWithText:@"5.請用 endAdd 結束 view 的處理"];
+    [self createTextFieldWithDefaultText:@""];
     
-    [self createLabelWithText:@"這是測試範例"];
-    [self createTextFieldWithDefaultText:@"Test"];
-    
-    [self createLabelWithText:@"這是測試範例"];
-    [self createTextFieldWithDefaultText:@"Test"];
-    
-    [self createLabelWithText:@"這是測試範例"];
-    [self createTextFieldWithDefaultText:@"Test"];
-    
+    [self createLabelWithText:@"6.記得去 AppDelegate 替換成此 viewController"];
+    [self createTextFieldWithDefaultText:@""];
+       
     // 記得加完結束通知一下
     [self endAdd];
 }
@@ -57,6 +51,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Base VC's delegate
+-(void)pressedButtonSend:(NSArray *)sender{
+    // TODO: send request
 }
 
 /*

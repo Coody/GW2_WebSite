@@ -12,6 +12,7 @@
 #define D_Hight (30.0f)
 
 #define FRAME_SIZE(TEXT,FONT) [(TEXT) boundingRectWithSize: CGSizeMake( CGFLOAT_MAX, CGFLOAT_MAX) options: NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: FONT} context: nil].size
+#define FRAME_SIZE_STATIC_WIDTH(TEXT,FONT,WIDTH) [(TEXT) boundingRectWithSize: CGSizeMake( WIDTH , CGFLOAT_MAX) options: NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: FONT} context: nil].size
 
 @interface BasicViewController ()
 {
@@ -20,8 +21,9 @@
 }
 
 @property (nonatomic , strong) UIView *testMainView;
+@property (nonatomic , strong) UIView *testResultMainView;
 @property (nonatomic , strong) UIScrollView *sendScrollView;
-@property (nonatomic , strong) UIScrollView *resultScrollView;
+@property (nonatomic , strong) UITextView *resultTextView;
 
 @property (nonatomic , strong) UIButton *sendBtn;
 
@@ -50,7 +52,7 @@
         
         // 建立傳送 button
         [self createSendButton];
-        
+               
         // 加入總 view
         [self.view addSubview:_testMainView];
         
@@ -92,11 +94,36 @@
     [_testMainView addSubview:_sendBtn];
 }
 
+-(void)createResultAlertWithString:(NSString *)tempString{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果："
+                                                    message:tempString
+                                                   delegate:nil
+                                          cancelButtonTitle:@"確定"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+-(void)createErrorResultAlertWithString:(NSString *)tempString withErrorCode:(NSInteger)tempErrorCode{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"錯誤!（code:%ld）" , (long)tempErrorCode]
+                                                    message:tempString
+                                                   delegate:nil
+                                          cancelButtonTitle:@"確定"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 #pragma mark - Send Button
 -(void)pressedSendBtn{
     // TODO:
     
     NSLog(@" Send !!");
+    
+    if ( [_delegate respondsToSelector:@selector(pressedButtonSend:)] ) {
+        [_delegate pressedButtonSend:textFieldArray];
+    }
+    else{
+        NSLog(@" \n\n*****\n\n  You have to Implement BaseViewController_Protocol's Delegate !!!! \n\n*****\n\n");
+    }
 }
 
 #pragma mark - Label
