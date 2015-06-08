@@ -17,15 +17,21 @@
 extern NSString *const GW2_KEY_Coins_Per_Gem;
 extern NSString *const GW2_KEY_Quantity;
 
+
 #pragma mark - Response Result
 @interface GW2_WebApi_Gems_Result:NSObject
 
-/***/
+/**
+ * @brief - 可以換成多少 coins（銅）
+ * @details - coinPerGem / 100 = Gold , exp: 1369(coin)/100 = 13.69(Gold)
+ */
 @property (nonatomic , strong) NSNumber *coinsPerGem;
-/***/
+
+/** 單位更小 */
 @property (nonatomic , strong) NSNumber *quantity;
 
 @end
+
 
 #pragma mark -
 @interface GW2_WebApi_Gems : WebApi < WebApi_Policy >

@@ -12,15 +12,11 @@
 NSString *const GW2_KEY_Coins_Per_Gem = @"coins_per_gem";
 NSString *const GW2_KEY_Quantity = @"quantity";
 
-#pragma mark - 
+#pragma mark - Gems_Result class
 @implementation GW2_WebApi_Gems_Result
 @end
 
-#pragma mark -
-@interface GW2_WebApi_Gems()
-@property (nonatomic) NSUInteger gems;
-@end
-
+#pragma mark - Gems class
 @implementation GW2_WebApi_Gems
 
 +(NSString *)uri{
