@@ -7,7 +7,7 @@ GW2 的 iOS WebApi 相關
 
 1. 請實作底下的方法來加入 GW2 Api 的尾端網址，例： https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=100 則只要加上：
 +(NSString *)uri{
-return @"/commerce/exchange/gems";
+return @"commerce/exchange/gems";
 }
 
 2. WebApi 請建立自己處理完要的 Result，命名原則通常為 className_Result 來接收資料。
