@@ -134,7 +134,7 @@
                                D_Separate + ([labelArray count] + [textFieldArray count])*(D_Hight + D_Separate) ,
                                self.view.frame.size.width - D_Separate*2 ,
                                D_Hight)];
-    [label setText:[NSString stringWithFormat:@"%@:" , tempText]];
+    [label setText:[NSString stringWithFormat:@"  %@ :" , tempText]];
     [label setTextColor:[UIColor blackColor]];
     [label setFont:[UIFont systemFontOfSize:16.0f]];
     [label setTag:([labelArray count]+1)];
@@ -153,7 +153,7 @@
                                    D_Separate + ([labelArray count] + [textFieldArray count])*(D_Hight + D_Separate),
                                    self.view.frame.size.width - D_Separate*2,
                                    D_Hight)];
-    [textField setText:tempText];
+    [textField setText:[NSString stringWithFormat:@"  %@" , tempText]];
     [textField setTextColor:[UIColor blackColor]];
     [textField setFont:[UIFont systemFontOfSize:16.0f]];
     [textField setTag:[textFieldArray count]+1];
