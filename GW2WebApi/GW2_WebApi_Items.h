@@ -14,7 +14,27 @@
 @property (nonatomic) NSInteger itemId;
 @property (nonatomic , strong) NSString *name;
 @property (nonatomic , strong) NSString *icon;
-@property (nonatomic , strong) 
+@property (nonatomic , strong) NSString *description;
+
+/** 
+ * @details - armor , back , bag , consumable , container , craftingMaterial , gathering , gizmo , miniPet , tool , trait , trinket , trophy , upgradeComponent , weapon
+ */
+@property (nonatomic , strong) NSString *type;
+
+/**
+ * @details - Junk , basic , fine , masterwork , rare , exotic , ascended , legendary
+ */
+@property (nonatomic , strong) NSString *rarity;
+
+@property (nonatomic) NSInteger level;
+@property (nonatomic) NSInteger vendor_value;
+@property (nonatomic) NSInteger default_skin;
+
+/** 
+ * @details - AccountBindOnUse , AccountBound , HideSuffix , MonsterOnly , NoMysticForge , NoSalvage , NoSell , NotUpgradeable , NoUnderwater , SoulbindOnAcquire , SoulBindOnUse , Unique
+ */
+@property (nonatomic , strong) NSArray *flags;
+
 
 /*
  For each requested item id, an object with the following properties is returned:
@@ -24,46 +44,11 @@
  icon (string) – The full icon URL.
  description (string, optional) – The item description.
  type (string) – The item type (see below). Possible values:
-    Armor – Armor
-    Back – Back item
-    Bag – Bags
-    Consumable – Consumables
-    Container – Containers
-    CraftingMaterial – Crafting materials
-    Gathering – Gathering tools
-    Gizmo – Gizmos
-    MiniPet – Miniatures
-    Tool – Salvage kits
-    Trait – Trait guides
-    Trinket – Trinkets
-    Trophy – Trophies
-    UpgradeComponent – Upgrade components
-    Weapon – Weapons
  rarity (string) – The item rarity. Possible values:
-    Junk
-    Basic
-    Fine
-    Masterwork
-    Rare
-    Exotic
-    Ascended
-    Legendary
  level (number) – The required level.
  vendor_value (number) – The value in coins when selling to a vendor. (Can be non-zero even when the item has the NoSell flag.)
  default_skin (number, optional) – The default skin id.
  flags (array of strings) – Flags applying to the item. Possible values:
-    AccountBindOnUse – Account bound on use
-    AccountBound – Account bound on acquire
-    HideSuffix – Hide the suffix of the upgrade component
-    MonsterOnly
-    NoMysticForge – Not usable in the Mystic Forge
-    NoSalvage – Not salvageable
-    NoSell – Not sellable
-    NotUpgradeable – Not upgradeable
-    NoUnderwater – Not available underwater
-    SoulbindOnAcquire – Soulbound on acquire
-    SoulBindOnUse – Soulbound on use
-    Unique – Unique
  game_types (array of strings) – The game types in which the item is usable. At least one game type is specified. Possible values:
     Activity – Usable in activities
     Dungeon – Usable in dungeons
