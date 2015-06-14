@@ -14,7 +14,7 @@
 @property (nonatomic) NSInteger itemId;
 @property (nonatomic , strong) NSString *name;
 @property (nonatomic , strong) NSString *icon;
-@property (nonatomic , strong) NSString *description;
+@property (nonatomic , strong) NSString *gw2_description;
 
 /** 
  * @details - armor , back , bag , consumable , container , craftingMaterial , gathering , gizmo , miniPet , tool , trait , trinket , trophy , upgradeComponent , weapon

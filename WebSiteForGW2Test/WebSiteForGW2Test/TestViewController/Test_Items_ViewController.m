@@ -44,11 +44,11 @@
 }
 
 -(void)gotItemIdsSuccessWithArray:(GW2_WebApi_Items_Result *)tempItemIds{
-    
+    NSLog(@"\n%@\n" , tempItemIds.itemId);
 }
 
 -(void)gotItemIdsFailWithErrorMsg:(NSString *)tempErrorMsg withErrorCode:(NSInteger)tempErrorCode{
-    
+    [self createErrorResultAlertWithString:tempErrorMsg withErrorCode:tempErrorCode];
 }
 
 @end
