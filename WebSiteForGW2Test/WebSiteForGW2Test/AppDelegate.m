@@ -12,8 +12,9 @@
 
 //*********************************************
 // For test!!
-#import "Test_ViewController_Demo.h"
-#import "Test_ViewController_Gems.h"
+#import "Test_Demo_ViewController.h"
+#import "Test_Gems_ViewController.h"
+#import "Test_Items_ViewController.h"
 //*********************************************
 
 @interface AppDelegate ()
@@ -34,7 +35,7 @@
     /**/
     [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault];
     
-    Test_ViewController_Gems *test = [[Test_ViewController_Gems alloc] init];
+    Test_Items_ViewController *test = [[Test_Items_ViewController alloc] init];
     
     self.window.rootViewController = test;
     

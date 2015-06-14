@@ -35,6 +35,16 @@
  */
 @property (nonatomic , strong) NSArray *flags;
 
+/**
+ * @details - Activity , Dungeon , Pve , Pvp , PvpLobby , Wvw
+ */
+@property (nonatomic , strong) NSArray *game_types;
+
+/**
+ * @details - Asura , Charr , Human , Norn , Sylvari , Guardian , Mesmer , Ranger , Warrior
+ */
+@property (nonatomic , strong) NSArray *restrictions;
+
 
 /*
  For each requested item id, an object with the following properties is returned:
@@ -74,11 +84,12 @@
 #pragma mark - Result
 @interface GW2_WebApi_Items_Result : NSObject
 
-@property (nonatomic , strong) NSMutableDictionary *itemIdDic;
+@property (nonatomic , strong) NSArray *itemId;
 
 @end
 
 @interface GW2_WebApi_Items : WebApi < WebApi_Policy >
 
++(GW2_WebApi_Items_Result *)parserResponse:(id)responseData;
 
 @end

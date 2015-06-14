@@ -5,7 +5,7 @@
 //  Created by CoodyChou on 2015/5/25.
 //  Copyright (c) 2015年 CoodyChou. All rights reserved.
 //
-//  7參考自：http://www.raywenderlich.com/59255/afnetworking-2-0-tutorial
+//  參考自：http://www.raywenderlich.com/59255/afnetworking-2-0-tutorial
 //
 
 #import "WebSiteHelper.h"

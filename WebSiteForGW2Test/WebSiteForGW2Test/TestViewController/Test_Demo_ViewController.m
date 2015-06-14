@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 CoodyChou. All rights reserved.
 //
 
-#import "Test_ViewController_Demo.h"
+#import "Test_Demo_ViewController.h"
 
-@interface Test_ViewController_Demo () <BaseViewController_Protocol>
+@interface Test_Demo_ViewController () <BaseViewController_Protocol>
 
 @end
 
-@implementation Test_ViewController_Demo
+@implementation Test_Demo_ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

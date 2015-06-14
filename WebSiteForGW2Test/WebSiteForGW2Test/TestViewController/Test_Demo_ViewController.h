@@ -8,6 +8,6 @@
 
 #import "BasicViewController.h"
 
-@interface Test_ViewController_Demo : BasicViewController
+@interface Test_Demo_ViewController : BasicViewController
 
 @end

@@ -26,7 +26,7 @@
     Clothing – Town clothing
  defense (number) – The defense value of the armor piece.
  infusion_slots (array of objects) – Infusion slots of the armor piece (see below).
- infix_upgrade (object, optional) – The infix upgrade object (see below).
+ infix_upgrade (object, optional)  – The infix upgrade object (see below).
  suffix_item_id (number, optional) – The suffix item id. This is usually a rune.
  secondary_suffix_item_id (string) – The secondary suffix item id. Equals to an empty string for all currently discovered items.
  */
@@ -60,7 +60,9 @@
 @property (nonatomic , strong) NSString *weight_class;
 @property (nonatomic) NSInteger defense;
 @property (nonatomic , strong) NSArray *infusion_slots;
-@property (nonatomic , strong) 
+@property (nonatomic , strong) NSString *infix_upgrade;
+@property (nonatomic , strong) NSNumber *suffix_item_id;
+@property (nonatomic , strong) NSString *secondary_suffix_item_id;
 
 @end
 

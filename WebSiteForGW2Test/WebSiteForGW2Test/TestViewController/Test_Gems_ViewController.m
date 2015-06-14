@@ -6,19 +6,19 @@
 //  Copyright (c) 2015年 CoodyChou. All rights reserved.
 //
 
-#import "Test_ViewController_Gems.h"
+#import "Test_Gems_ViewController.h"
 
 #import "GW2_WebApi_Gems.h"
 #import "GW2_Request_Gems.h"
 
-@interface Test_ViewController_Gems () < BaseViewController_Protocol , GW2_Request_Gems_Protocol >
+@interface Test_Gems_ViewController () < BaseViewController_Protocol , GW2_Request_Gems_Protocol >
 {
     GW2_Request_Gems *gemsRequest;
 }
 
 @end
 
-@implementation Test_ViewController_Gems
+@implementation Test_Gems_ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

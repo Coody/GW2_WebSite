@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		70CFDCFCD2BB5A106B8CB658 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B8C9E4E6E7887EA6C7768A /* libPods.a */; };
-		FB2F95951B261C16008D8008 /* Test_ViewController_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2F95941B261C16008D8008 /* Test_ViewController_Gems.m */; };
+		FB2F95951B261C16008D8008 /* Test_Gems_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2F95941B261C16008D8008 /* Test_Gems_ViewController.m */; };
 		FB48403D1B2888F200DF8B7F /* GW2_WebApi_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = FB48403C1B2888F200DF8B7F /* GW2_WebApi_Items.m */; };
 		FB4840411B2891E300DF8B7F /* GW2_Details_Armor.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4840401B2891E300DF8B7F /* GW2_Details_Armor.m */; };
+		FB637D281B2DA9260039740B /* GW2_WebApi_Items_Armor.m in Sources */ = {isa = PBXBuildFile; fileRef = FB637D271B2DA9260039740B /* GW2_WebApi_Items_Armor.m */; };
+		FB637D2B1B2DAA100039740B /* Test_Items_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB637D2A1B2DAA100039740B /* Test_Items_ViewController.m */; };
+		FB637D2E1B2DABB70039740B /* GW2_Request_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = FB637D2D1B2DABB70039740B /* GW2_Request_Items.m */; };
 		FB8737211B24D2CC005F1B55 /* WebApi.m in Sources */ = {isa = PBXBuildFile; fileRef = FB87371E1B24D2CC005F1B55 /* WebApi.m */; };
 		FB8737221B24D2CC005F1B55 /* WebSiteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8737201B24D2CC005F1B55 /* WebSiteHelper.m */; };
-		FB8F97181B1F46E900E1DD28 /* Test_ViewController_Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8F97171B1F46E900E1DD28 /* Test_ViewController_Demo.m */; };
+		FB8F97181B1F46E900E1DD28 /* Test_Demo_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8F97171B1F46E900E1DD28 /* Test_Demo_ViewController.m */; };
 		FBCA3B1E1B26180100AA04A3 /* GW2_WebApi_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCA3B1D1B26180100AA04A3 /* GW2_WebApi_Gems.m */; };
 		FBCA3B211B26181100AA04A3 /* GW2_Request_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCA3B201B26181100AA04A3 /* GW2_Request_Gems.m */; };
 		FBF94AE41B1F23E4005E3D45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF94AE31B1F23E4005E3D45 /* main.m */; };
@@ -37,18 +40,24 @@
 /* Begin PBXFileReference section */
 		41E9F89DC9488AA8D951CDA4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		42B8C9E4E6E7887EA6C7768A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB2F95931B261C16008D8008 /* Test_ViewController_Gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_ViewController_Gems.h; path = TestViewController/Test_ViewController_Gems.h; sourceTree = "<group>"; };
-		FB2F95941B261C16008D8008 /* Test_ViewController_Gems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_ViewController_Gems.m; path = TestViewController/Test_ViewController_Gems.m; sourceTree = "<group>"; };
+		FB2F95931B261C16008D8008 /* Test_Gems_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_Gems_ViewController.h; path = TestViewController/Test_Gems_ViewController.h; sourceTree = "<group>"; };
+		FB2F95941B261C16008D8008 /* Test_Gems_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_Gems_ViewController.m; path = TestViewController/Test_Gems_ViewController.m; sourceTree = "<group>"; };
 		FB48403B1B2888F200DF8B7F /* GW2_WebApi_Items.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GW2_WebApi_Items.h; path = ../../GW2WebApi/GW2_WebApi_Items.h; sourceTree = "<group>"; };
 		FB48403C1B2888F200DF8B7F /* GW2_WebApi_Items.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2_WebApi_Items.m; path = ../../GW2WebApi/GW2_WebApi_Items.m; sourceTree = "<group>"; };
 		FB48403F1B2891E300DF8B7F /* GW2_Details_Armor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GW2_Details_Armor.h; path = ../../GW2WebApi/Items/GW2_Details_Armor.h; sourceTree = "<group>"; };
 		FB4840401B2891E300DF8B7F /* GW2_Details_Armor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2_Details_Armor.m; path = ../../GW2WebApi/Items/GW2_Details_Armor.m; sourceTree = "<group>"; };
+		FB637D261B2DA9260039740B /* GW2_WebApi_Items_Armor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GW2_WebApi_Items_Armor.h; path = ../../GW2WebApi/GW2_WebApi_Items_Armor.h; sourceTree = "<group>"; };
+		FB637D271B2DA9260039740B /* GW2_WebApi_Items_Armor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2_WebApi_Items_Armor.m; path = ../../GW2WebApi/GW2_WebApi_Items_Armor.m; sourceTree = "<group>"; };
+		FB637D291B2DAA100039740B /* Test_Items_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_Items_ViewController.h; path = TestViewController/Test_Items_ViewController.h; sourceTree = "<group>"; };
+		FB637D2A1B2DAA100039740B /* Test_Items_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_Items_ViewController.m; path = TestViewController/Test_Items_ViewController.m; sourceTree = "<group>"; };
+		FB637D2C1B2DABB70039740B /* GW2_Request_Items.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GW2_Request_Items.h; path = ../../GW2Request/GW2_Request_Items.h; sourceTree = "<group>"; };
+		FB637D2D1B2DABB70039740B /* GW2_Request_Items.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2_Request_Items.m; path = ../../GW2Request/GW2_Request_Items.m; sourceTree = "<group>"; };
 		FB87371D1B24D2CC005F1B55 /* WebApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebApi.h; path = ../../GW2WebsiteBase/WebApi.h; sourceTree = "<group>"; };
 		FB87371E1B24D2CC005F1B55 /* WebApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebApi.m; path = ../../GW2WebsiteBase/WebApi.m; sourceTree = "<group>"; };
 		FB87371F1B24D2CC005F1B55 /* WebSiteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSiteHelper.h; path = ../../GW2WebsiteBase/WebSiteHelper.h; sourceTree = "<group>"; };
 		FB8737201B24D2CC005F1B55 /* WebSiteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebSiteHelper.m; path = ../../GW2WebsiteBase/WebSiteHelper.m; sourceTree = "<group>"; };
-		FB8F97161B1F46E900E1DD28 /* Test_ViewController_Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_ViewController_Demo.h; path = TestViewController/Test_ViewController_Demo.h; sourceTree = "<group>"; };
-		FB8F97171B1F46E900E1DD28 /* Test_ViewController_Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_ViewController_Demo.m; path = TestViewController/Test_ViewController_Demo.m; sourceTree = "<group>"; };
+		FB8F97161B1F46E900E1DD28 /* Test_Demo_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_Demo_ViewController.h; path = TestViewController/Test_Demo_ViewController.h; sourceTree = "<group>"; };
+		FB8F97171B1F46E900E1DD28 /* Test_Demo_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_Demo_ViewController.m; path = TestViewController/Test_Demo_ViewController.m; sourceTree = "<group>"; };
 		FBCA3B1C1B26180100AA04A3 /* GW2_WebApi_Gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GW2_WebApi_Gems.h; path = ../../GW2WebApi/GW2_WebApi_Gems.h; sourceTree = "<group>"; };
 		FBCA3B1D1B26180100AA04A3 /* GW2_WebApi_Gems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2_WebApi_Gems.m; path = ../../GW2WebApi/GW2_WebApi_Gems.m; sourceTree = "<group>"; };
 		FBCA3B1F1B26181100AA04A3 /* GW2_Request_Gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GW2_Request_Gems.h; path = ../../GW2Request/GW2_Request_Gems.h; sourceTree = "<group>"; };
@@ -121,6 +130,8 @@
 				FBCA3B1D1B26180100AA04A3 /* GW2_WebApi_Gems.m */,
 				FB48403B1B2888F200DF8B7F /* GW2_WebApi_Items.h */,
 				FB48403C1B2888F200DF8B7F /* GW2_WebApi_Items.m */,
+				FB637D261B2DA9260039740B /* GW2_WebApi_Items_Armor.h */,
+				FB637D271B2DA9260039740B /* GW2_WebApi_Items_Armor.m */,
 			);
 			name = GW2WebApi;
 			sourceTree = "<group>";
@@ -130,6 +141,8 @@
 			children = (
 				FBCA3B1F1B26181100AA04A3 /* GW2_Request_Gems.h */,
 				FBCA3B201B26181100AA04A3 /* GW2_Request_Gems.m */,
+				FB637D2C1B2DABB70039740B /* GW2_Request_Items.h */,
+				FB637D2D1B2DABB70039740B /* GW2_Request_Items.m */,
 			);
 			name = GW2Request;
 			sourceTree = "<group>";
@@ -148,10 +161,12 @@
 		FB8F97151B1F3E4700E1DD28 /* TestViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FB2F95931B261C16008D8008 /* Test_ViewController_Gems.h */,
-				FB2F95941B261C16008D8008 /* Test_ViewController_Gems.m */,
-				FB8F97161B1F46E900E1DD28 /* Test_ViewController_Demo.h */,
-				FB8F97171B1F46E900E1DD28 /* Test_ViewController_Demo.m */,
+				FB8F97161B1F46E900E1DD28 /* Test_Demo_ViewController.h */,
+				FB8F97171B1F46E900E1DD28 /* Test_Demo_ViewController.m */,
+				FB2F95931B261C16008D8008 /* Test_Gems_ViewController.h */,
+				FB2F95941B261C16008D8008 /* Test_Gems_ViewController.m */,
+				FB637D291B2DAA100039740B /* Test_Items_ViewController.h */,
+				FB637D2A1B2DAA100039740B /* Test_Items_ViewController.m */,
 			);
 			name = TestViewController;
 			sourceTree = "<group>";
@@ -363,17 +378,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB2F95951B261C16008D8008 /* Test_ViewController_Gems.m in Sources */,
+				FB2F95951B261C16008D8008 /* Test_Gems_ViewController.m in Sources */,
 				FBCA3B211B26181100AA04A3 /* GW2_Request_Gems.m in Sources */,
 				FBF94AEA1B1F23E4005E3D45 /* BasicViewController.m in Sources */,
+				FB637D281B2DA9260039740B /* GW2_WebApi_Items_Armor.m in Sources */,
 				FB8737221B24D2CC005F1B55 /* WebSiteHelper.m in Sources */,
+				FB637D2B1B2DAA100039740B /* Test_Items_ViewController.m in Sources */,
 				FBF94AE71B1F23E4005E3D45 /* AppDelegate.m in Sources */,
 				FB48403D1B2888F200DF8B7F /* GW2_WebApi_Items.m in Sources */,
 				FBF94AE41B1F23E4005E3D45 /* main.m in Sources */,
 				FB8737211B24D2CC005F1B55 /* WebApi.m in Sources */,
 				FBCA3B1E1B26180100AA04A3 /* GW2_WebApi_Gems.m in Sources */,
-				FB8F97181B1F46E900E1DD28 /* Test_ViewController_Demo.m in Sources */,
+				FB8F97181B1F46E900E1DD28 /* Test_Demo_ViewController.m in Sources */,
 				FB4840411B2891E300DF8B7F /* GW2_Details_Armor.m in Sources */,
+				FB637D2E1B2DABB70039740B /* GW2_Request_Items.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
