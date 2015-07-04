@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 CoodyChou. All rights reserved.
 //
 
-#import "WebSiteHelper.h"
+#import "WebSiteRequest.h"
 
 @class GW2_WebApi_Gems_Result;
 

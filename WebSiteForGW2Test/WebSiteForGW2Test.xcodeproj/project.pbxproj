@@ -15,7 +15,7 @@
 		FB637D2B1B2DAA100039740B /* Test_Items_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB637D2A1B2DAA100039740B /* Test_Items_ViewController.m */; };
 		FB637D2E1B2DABB70039740B /* GW2_Request_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = FB637D2D1B2DABB70039740B /* GW2_Request_Items.m */; };
 		FB8737211B24D2CC005F1B55 /* WebApi.m in Sources */ = {isa = PBXBuildFile; fileRef = FB87371E1B24D2CC005F1B55 /* WebApi.m */; };
-		FB8737221B24D2CC005F1B55 /* WebSiteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8737201B24D2CC005F1B55 /* WebSiteHelper.m */; };
+		FB8737221B24D2CC005F1B55 /* WebSiteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8737201B24D2CC005F1B55 /* WebSiteRequest.m */; };
 		FB8F97181B1F46E900E1DD28 /* Test_Demo_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8F97171B1F46E900E1DD28 /* Test_Demo_ViewController.m */; };
 		FBCA3B1E1B26180100AA04A3 /* GW2_WebApi_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCA3B1D1B26180100AA04A3 /* GW2_WebApi_Gems.m */; };
 		FBCA3B211B26181100AA04A3 /* GW2_Request_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCA3B201B26181100AA04A3 /* GW2_Request_Gems.m */; };
@@ -54,8 +54,8 @@
 		FB637D2D1B2DABB70039740B /* GW2_Request_Items.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2_Request_Items.m; path = ../../GW2Request/GW2_Request_Items.m; sourceTree = "<group>"; };
 		FB87371D1B24D2CC005F1B55 /* WebApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebApi.h; path = ../../GW2WebsiteBase/WebApi.h; sourceTree = "<group>"; };
 		FB87371E1B24D2CC005F1B55 /* WebApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebApi.m; path = ../../GW2WebsiteBase/WebApi.m; sourceTree = "<group>"; };
-		FB87371F1B24D2CC005F1B55 /* WebSiteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSiteHelper.h; path = ../../GW2WebsiteBase/WebSiteHelper.h; sourceTree = "<group>"; };
-		FB8737201B24D2CC005F1B55 /* WebSiteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebSiteHelper.m; path = ../../GW2WebsiteBase/WebSiteHelper.m; sourceTree = "<group>"; };
+		FB87371F1B24D2CC005F1B55 /* WebSiteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSiteRequest.h; path = ../../GW2WebsiteBase/WebSiteRequest.h; sourceTree = "<group>"; };
+		FB8737201B24D2CC005F1B55 /* WebSiteRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebSiteRequest.m; path = ../../GW2WebsiteBase/WebSiteRequest.m; sourceTree = "<group>"; };
 		FB8F97161B1F46E900E1DD28 /* Test_Demo_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_Demo_ViewController.h; path = TestViewController/Test_Demo_ViewController.h; sourceTree = "<group>"; };
 		FB8F97171B1F46E900E1DD28 /* Test_Demo_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_Demo_ViewController.m; path = TestViewController/Test_Demo_ViewController.m; sourceTree = "<group>"; };
 		FBCA3B1C1B26180100AA04A3 /* GW2_WebApi_Gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GW2_WebApi_Gems.h; path = ../../GW2WebApi/GW2_WebApi_Gems.h; sourceTree = "<group>"; };
@@ -152,8 +152,8 @@
 			children = (
 				FB87371D1B24D2CC005F1B55 /* WebApi.h */,
 				FB87371E1B24D2CC005F1B55 /* WebApi.m */,
-				FB87371F1B24D2CC005F1B55 /* WebSiteHelper.h */,
-				FB8737201B24D2CC005F1B55 /* WebSiteHelper.m */,
+				FB87371F1B24D2CC005F1B55 /* WebSiteRequest.h */,
+				FB8737201B24D2CC005F1B55 /* WebSiteRequest.m */,
 			);
 			name = GW2WebsiteBase;
 			sourceTree = "<group>";
@@ -382,7 +382,7 @@
 				FBCA3B211B26181100AA04A3 /* GW2_Request_Gems.m in Sources */,
 				FBF94AEA1B1F23E4005E3D45 /* BasicViewController.m in Sources */,
 				FB637D281B2DA9260039740B /* GW2_WebApi_Items_Armor.m in Sources */,
-				FB8737221B24D2CC005F1B55 /* WebSiteHelper.m in Sources */,
+				FB8737221B24D2CC005F1B55 /* WebSiteRequest.m in Sources */,
 				FB637D2B1B2DAA100039740B /* Test_Items_ViewController.m in Sources */,
 				FBF94AE71B1F23E4005E3D45 /* AppDelegate.m in Sources */,
 				FB48403D1B2888F200DF8B7F /* GW2_WebApi_Items.m in Sources */,

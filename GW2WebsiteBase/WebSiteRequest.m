@@ -8,7 +8,7 @@
 //  參考自：http://www.raywenderlich.com/59255/afnetworking-2-0-tutorial
 //
 
-#import "WebSiteHelper.h"
+#import "WebSiteRequest.h"
 
 #import "AFNetworking.h"
 
