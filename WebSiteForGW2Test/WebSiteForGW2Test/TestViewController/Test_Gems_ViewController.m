@@ -14,6 +14,7 @@
 @interface Test_Gems_ViewController () < BaseViewController_Protocol , GW2_Request_Gems_Protocol >
 {
     GW2_Request_Gems *gemsRequest;
+    NSInteger _gem;
 }
 
 @end
@@ -36,7 +37,7 @@
     self.delegate = self;
     
     // 顯示介面
-    [self createLabelWithText:@"輸入 Gems"];
+    [self createLabelWithText:@"輸入你想換的 Gems ："];
     [self createTextFieldWithDefaultText:@"100"];
     [self endAdd];
     
@@ -47,13 +48,14 @@
 
 #pragma mark - Base VC's delegate
 -(void)pressedButtonSend:(NSArray *)sender{
-    [gemsRequest setGems:[((UITextField *)[sender objectAtIndex:0]).text integerValue]];
+    _gem = [((UITextField *)[sender objectAtIndex:0]).text integerValue];
+    [gemsRequest setGems:_gem];
     [gemsRequest sendRequest];
 }
 
 #pragma mark - Request's delegate
 -(void)gotGemsRequestSuccessWithDic:(GW2_WebApi_Gems_Result *)tempGemsResult{
-    NSString *resultString = [NSString stringWithFormat:@"{ %@ : %@ ,\n  %@ : %@ }" , GW2_KEY_Coins_Per_Gem , tempGemsResult.coinsPerGem , GW2_KEY_Quantity , tempGemsResult.quantity];
+    NSString *resultString = [NSString stringWithFormat:@"{ 1 Gem = %.4f 銅 ,\n  %ld Gem 請拿 %.2f 金來換 }" , (float)tempGemsResult.coins_per_gem/10000.0f , (long)_gem , (float)tempGemsResult.quantity/10000.0f];
     [self createResultAlertWithString:resultString];
 }
 

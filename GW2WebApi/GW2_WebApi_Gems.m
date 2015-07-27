@@ -29,11 +29,13 @@ NSString *const GW2_KEY_Quantity = @"quantity";
 
 + (GW2_WebApi_Gems_Result *) parserResponse:(id)responseData
 {
-    GW2_WebApi_Gems_Result *gemResult = [GW2_WebApi_Gems_Result new];
+    NSError *error = nil;
+    GW2_WebApi_Gems_Result *gemResult = [[GW2_WebApi_Gems_Result alloc] initWithDictionary:responseData
+                                                                                     error:&error];
     
-    gemResult.coinsPerGem = [responseData objectForKey:GW2_KEY_Coins_Per_Gem];
-    gemResult.quantity = [responseData objectForKey:GW2_KEY_Quantity];
-    
+    if ( error != nil ) {
+        NSLog(@"error = %@" , error.description);
+    }
     return gemResult;
 }
 

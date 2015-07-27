@@ -13,22 +13,26 @@
  */
 
 #import "WebApi.h"
+#import "JSONModel.h"
 
 extern NSString *const GW2_KEY_Coins_Per_Gem;
 extern NSString *const GW2_KEY_Quantity;
 
 
 #pragma mark - Response Result
-@interface GW2_WebApi_Gems_Result:NSObject
+@interface GW2_WebApi_Gems_Result:JSONModel
 
-/** 基本單位 */
-@property (nonatomic , strong) NSNumber *coinsPerGem;
+/** 
+ * @brief - 1 Gem = 此數值/10000 （金）。
+ */
+@property (assign , nonatomic) int coins_per_gem;
 
 /**
  * @brief   - 可以換成多少 coins（銅）
  * @details - coinPerGem / 10000 = Gold , exp: 134015(coin)/10000 = 13.4015(Gold)
+ * @details - 當輸入 100 Gem = 11~12金（所以請用12金換 100 Gem）
  */
-@property (nonatomic , strong) NSNumber *quantity;
+@property (assign , nonatomic) long long quantity;
 
 @end
 
