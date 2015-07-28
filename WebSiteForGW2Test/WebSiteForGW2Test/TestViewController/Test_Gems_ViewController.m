@@ -37,7 +37,7 @@
     self.delegate = self;
     
     // 顯示介面
-    [self createLabelWithText:@"輸入你想換的 Gems ："];
+    [self createLabelWithText:@"輸入你想用多少 Gem 換成金？"];
     [self createTextFieldWithDefaultText:@"100"];
     [self endAdd];
     
@@ -55,7 +55,7 @@
 
 #pragma mark - Request's delegate
 -(void)gotGemsRequestSuccessWithDic:(GW2_WebApi_Gems_Result *)tempGemsResult{
-    NSString *resultString = [NSString stringWithFormat:@"{ 1 Gem = %.4f 銅 ,\n  %ld Gem 請拿 %.2f 金來換 }" , (float)tempGemsResult.coins_per_gem/10000.0f , (long)_gem , (float)tempGemsResult.quantity/10000.0f];
+    NSString *resultString = [NSString stringWithFormat:@"{ 1 Gem = %.4f 金 ,\n  %ld Gem 可以換成 %.4f 金 }" , (float)tempGemsResult.coins_per_gem/10000.0f , (long)_gem , (float)tempGemsResult.quantity/10000.0f];
     [self createResultAlertWithString:resultString];
 }
 
