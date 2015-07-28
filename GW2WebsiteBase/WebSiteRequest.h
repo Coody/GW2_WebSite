@@ -10,23 +10,22 @@
 
 #import "AFHTTPSessionManager.h"
 
-
 #pragma mark - WebSiteHelper
 @class AFHTTPRequestOperation;
 
+// Get
 extern NSString *const httpGet;
+// Post
 extern NSString *const httpPost;
 
+// Response Data Task 的 block
 typedef void(^URLSessionDataTaskHandler)(NSURLSessionDataTask *task, id responseObject , NSError *error);
-
-@protocol WeatherHTTPClientDelegate;
 
 @interface WebSiteHelper : AFHTTPSessionManager
 
-@property (nonatomic, weak) id <WeatherHTTPClientDelegate> delegate;
-
+// GW2 官方 Api Version 1 的 url
 +(NSString *)getGW2_V1_Url;
-
+// GW2 官方 Api Version 2 的url
 +(NSString *)getGW2_V2_Url;
 
 +(WebSiteHelper *)sharedInstance;
