@@ -2,7 +2,7 @@
 ![建立者](https://img.shields.io/badge/建立者-Coody-orange.svg)
 ![License](https://img.shields.io/dub/l/vibe-d.svg)
 
->此專案是用來幫助 iOS 開發者能夠更方便寫出 GW2 的 iOS App 的 WebApi
+>此專案是用來幫助 iOS 開發者能夠更方便寫出 GW2 的 iOS App 的 WebApi 
 
 # 基本：
 > 以 Gem 換成金的例子來看，只要三個步驟就可以跟官方發出請求、並且接收其回傳值：
@@ -86,6 +86,10 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 >請繼承 BasicViewController ，並且直接 create Label , 以及 create TextField，測試案例請看 Test_ViewController_Gems 或是 Text_ViewController_Demo 。
 
 請去 AppDelegate 將初始 ViewController 替換掉。
+
+### 第三方 Framework
+- AFNetworking : https://github.com/Coody/AFNetworking
+- JSONModel : https://github.com/icanzilb/JSONModel
 
 
 如果有任何問題，請來信：coody0829@gmail.com
