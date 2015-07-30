@@ -1,10 +1,36 @@
 # GW2_WebSite
+![建立者](https://img.shields.io/badge/建立者-Coody-orange.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
 
-GW2 的 iOS WebApi 相關
+>>此專案是用來幫助 iOS 開發者能夠更方便寫出 GW2 的 iOS App 的 WebApi
+# 基本：
+> 以 Gem 換成金的例子來看，只要三個步驟就可以跟官方發出請求、並且接收其回傳值：
+```
+#import "GW2_WebApi_Gems.h"
+#import "GW2_Request_Gems.h"
+...
+// 建立 request ，記得在 interface 加上 < GW2_Request_Gems_Protocol > ，並且實作其接收回傳值的方法
+GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self];
+[gemsRequest setGems:100];  // 以 100 Gem 換算為單位（可自行輸入）
+[gemsRequest sendRequest];
+```
+>然後再實作 GW2_Request_Gems_Protocol 的方法來處理接收值：
+```
+-(void)gotGemsRequestSuccessWithDic:(GW2_WebApi_Gems_Result *)tempGemsResult{
+    // TODO: tempGemsResule shows 100 Gem = ?? Gold. Just do what you wanna show.
+}
 
-# GW2 WebApi 類別的建立方法：
+-(void)gotGemsRequestFailWithErrorMsg:(NSString *)tempErrorMsg 
+                        withErrorCode:(NSInteger)tempErrorCode{
+    // TODO: Got error, you can check error message and show alert or whatever you want.
+}
+```
 
-請繼承 WebApi，並且實作 WebApi_Policy
+# 進階：
+> WebApi , 以及其 Request 客製化類別的建立。
+### GW2 WebApi 類別的建立方法：
+
+>請繼承 WebApi，並且實作 WebApi_Policy
 
 1. 請實作底下的方法來加入 GW2 Api 的尾端網址，例： https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=100 的詢問``(請不要把 ? 後面的詢問項目寫在 uri 內！)``，只要加上：
 ```
@@ -29,9 +55,9 @@ GW2 的 iOS WebApi 相關
 +(GW2_WebApi_Gems_Result *)parserResponse:(id)responseData;
 ```
 
-# GW2 Request 類別的建立方法：
+### GW2 Request 類別的建立方法：
 
-請繼承 WebSiteRequest ，並且建立他的 Protocol ，讓使用這個 Request 問了 GW2 的 WebApi 後，回傳的值可以傳送到 Protocol （不管成功、失敗都傳），讓使用此類別的 ViewController （或是其他類別），可以處理收到的資料。
+>繼承 WebSiteRequest ，並且建立他的 Protocol ，讓使用這個 Request 問了 GW2 的 WebApi 後，回傳的值可以傳送到 Protocol （不管成功、失敗都傳），讓使用此類別的 ViewController （或是其他類別），可以處理收到的資料。
 
 1. 如果有傳送參數，請開出方法來設定，例子如下：
 ```
@@ -52,9 +78,9 @@ GW2 的 iOS WebApi 相關
 } 
 ```
 
-# 測試案例建立方法：
+### 測試案例建立方法：
 
-請繼承 BasicViewController ，並且直接 create Label , 以及 create TextField，測試案例請看 Test_ViewController_Gems 或是 Text_ViewController_Demo 。
+>請繼承 BasicViewController ，並且直接 create Label , 以及 create TextField，測試案例請看 Test_ViewController_Gems 或是 Text_ViewController_Demo 。
 
 請去 AppDelegate 將初始 ViewController 替換掉。
 
