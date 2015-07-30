@@ -1,6 +1,6 @@
 # GW2_WebSite
 ![建立者](https://img.shields.io/badge/建立者-Coody-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
+![License](https://img.shields.io/dub/l/vibe-d.svg)
 
 >此專案是用來幫助 iOS 開發者能夠更方便寫出 GW2 的 iOS App 的 WebApi
 
