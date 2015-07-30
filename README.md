@@ -1,18 +1,21 @@
 # GW2_WebSite
+
 GW2 的 iOS WebApi 相關
 
 # GW2 WebApi 類別的建立方法：
 
 請繼承 WebApi，並且實作 WebApi_Policy
 
-1. 請實作底下的方法來加入 GW2 Api 的尾端網址，例： https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=100 則只要加上：
+1. 請實作底下的方法來加入 GW2 Api 的尾端網址，例： https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=100 的詢問``(請不要把 ? 後面的詢問項目寫在 uri 內！)``，只要加上：
 ```
 +(NSString *)uri{
     return @"commerce/exchange/gems";
 }
 ```
 
-2. WebApi 請建立自己處理完要的 Result，命名原則通常為 className_Result 來接收資料。
+
+2. 回傳結果使用 JSONModel 來處理，因此請將接收參數定義為同名、或是使用 JSONModel 的 KeyMapping 來對應回傳參數命名。
+``詳細請看：https://github.com/icanzilb/JSONModel``
 
 3. Key 請建立出來讓使用此 WebApi 的人知道有哪些 Key。
 
