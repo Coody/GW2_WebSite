@@ -2,9 +2,11 @@
 ![建立者](https://img.shields.io/badge/建立者-Coody-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
 
->>此專案是用來幫助 iOS 開發者能夠更方便寫出 GW2 的 iOS App 的 WebApi
+>此專案是用來幫助 iOS 開發者能夠更方便寫出 GW2 的 iOS App 的 WebApi
+
 # 基本：
 > 以 Gem 換成金的例子來看，只要三個步驟就可以跟官方發出請求、並且接收其回傳值：
+
 ```
 #import "GW2_WebApi_Gems.h"
 #import "GW2_Request_Gems.h"
@@ -14,6 +16,7 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 [gemsRequest setGems:100];  // 以 100 Gem 換算為單位（可自行輸入）
 [gemsRequest sendRequest];
 ```
+
 >然後再實作 GW2_Request_Gems_Protocol 的方法來處理接收值：
 ```
 -(void)gotGemsRequestSuccessWithDic:(GW2_WebApi_Gems_Result *)tempGemsResult{
@@ -28,11 +31,13 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 
 # 進階：
 > WebApi , 以及其 Request 客製化類別的建立。
+
 ### GW2 WebApi 類別的建立方法：
 
 >請繼承 WebApi，並且實作 WebApi_Policy
 
 1. 請實作底下的方法來加入 GW2 Api 的尾端網址，例： https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=100 的詢問``(請不要把 ? 後面的詢問項目寫在 uri 內！)``，只要加上：
+
 ```
 +(NSString *)uri{
     return @"commerce/exchange/gems";
