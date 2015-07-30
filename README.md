@@ -83,6 +83,8 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 
 ### 測試案例建立方法：
 
+>測試專案主要用來作單元測試，因此如果只是單傳用寫好的 WebApi 以及 Request 可以不用將 WebSiteForGW2Test 這個資料夾加入自己專案中；但如果要自己撰寫 WebApi 以及 Request ，建議可以用這個測試專案來做測試。
+>BaseViewController 已經寫好介面，所以不用自行撰寫 TextField 、以及 UIButton ，詳細請看註解。
 >請繼承 BasicViewController ，並且直接 create Label , 以及 create TextField，測試案例請看 Test_ViewController_Gems 或是 Text_ViewController_Demo 。
 
 請去 AppDelegate 將初始 ViewController 替換掉。
