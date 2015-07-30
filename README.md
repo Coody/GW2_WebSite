@@ -48,14 +48,12 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 2. 回傳結果使用 JSONModel 來處理，因此請將接收參數定義為同名、或是使用 JSONModel 的 KeyMapping 來對應回傳參數命名。
 ``詳細請看：https://github.com/icanzilb/JSONModel``
 
-3. Key 請建立出來讓使用此 WebApi 的人知道有哪些 Key。
-
-4. 如果此 WebApi 有傳送參數，請建立類別方法來加入參數，如：
+3. 如果此 WebApi 有傳送參數，請建立類別方法來加入參數，如：
 ```
 +(NSDictionary *)getGems:(NSInteger)tempGems;
 ```
 
-5. 請一定要建立 GW2 的 WebApi 回傳時，要怎麼將資料剖析到 className_Result 中，並回傳，如：
+4. 請一定要建立 GW2 的 WebApi 回傳時，要怎麼將資料剖析到 className_Result 中（這裡請直接用 JSONModel 的開放方法來處理就好），並回傳，如：
 ```
 +(GW2_WebApi_Gems_Result *)parserResponse:(id)responseData;
 ```
