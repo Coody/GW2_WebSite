@@ -2,7 +2,7 @@
 ![建立者](https://img.shields.io/badge/建立者-Coody-orange.svg)
 ![License](https://img.shields.io/dub/l/vibe-d.svg)
 
->此專案是用來幫助 iOS 開發者能夠更方便寫出 GW2 的 iOS App 的 WebApi 
+>此專案是用來幫助 iOS 開發者能夠更方便寫出 GW2 的 iOS App 的 WebApi ，讓開發者可以專心設計更好的 iOS native App 介面、以及好的使用者體驗，而不用自己寫很多傳送、接收的類別來增加開發難度。
 
 # 基本：
 > 以 Gem 換成金的例子來看，只要三個步驟就可以跟官方發出請求、並且接收其回傳值：
