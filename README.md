@@ -18,11 +18,11 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 ```
 
 >然後再實作 GW2_Request_Gems_Protocol 的方法來處理接收值：
+
 ```
 -(void)gotGemsRequestSuccessWithDic:(GW2_WebApi_Gems_Result *)tempGemsResult{
     // TODO: tempGemsResule shows 100 Gem = ?? Gold. Just do what you wanna show.
 }
-
 -(void)gotGemsRequestFailWithErrorMsg:(NSString *)tempErrorMsg 
                         withErrorCode:(NSInteger)tempErrorCode{
     // TODO: Got error, you can check error message and show alert or whatever you want.
