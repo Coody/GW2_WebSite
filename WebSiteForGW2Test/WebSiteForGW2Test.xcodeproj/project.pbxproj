@@ -20,6 +20,7 @@
 		FB8F97181B1F46E900E1DD28 /* Test_Demo_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8F97171B1F46E900E1DD28 /* Test_Demo_ViewController.m */; };
 		FBCA3B1E1B26180100AA04A3 /* GW2_WebApi_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCA3B1D1B26180100AA04A3 /* GW2_WebApi_Gems.m */; };
 		FBCA3B211B26181100AA04A3 /* GW2_Request_Gems.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCA3B201B26181100AA04A3 /* GW2_Request_Gems.m */; };
+		FBEB8D581B6B3E3600C2648B /* GW2_WebApi_Coins.m in Sources */ = {isa = PBXBuildFile; fileRef = FBEB8D571B6B3E3600C2648B /* GW2_WebApi_Coins.m */; };
 		FBF94AE41B1F23E4005E3D45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF94AE31B1F23E4005E3D45 /* main.m */; };
 		FBF94AE71B1F23E4005E3D45 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF94AE61B1F23E4005E3D45 /* AppDelegate.m */; };
 		FBF94AEA1B1F23E4005E3D45 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF94AE91B1F23E4005E3D45 /* BasicViewController.m */; };
@@ -64,6 +65,8 @@
 		FBCA3B1D1B26180100AA04A3 /* GW2_WebApi_Gems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2_WebApi_Gems.m; path = ../../GW2WebApi/GW2_WebApi_Gems.m; sourceTree = "<group>"; };
 		FBCA3B1F1B26181100AA04A3 /* GW2_Request_Gems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GW2_Request_Gems.h; path = ../../GW2Request/GW2_Request_Gems.h; sourceTree = "<group>"; };
 		FBCA3B201B26181100AA04A3 /* GW2_Request_Gems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2_Request_Gems.m; path = ../../GW2Request/GW2_Request_Gems.m; sourceTree = "<group>"; };
+		FBEB8D561B6B3E3600C2648B /* GW2_WebApi_Coins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GW2_WebApi_Coins.h; path = ../../GW2WebApi/GW2_WebApi_Coins.h; sourceTree = "<group>"; };
+		FBEB8D571B6B3E3600C2648B /* GW2_WebApi_Coins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GW2_WebApi_Coins.m; path = ../../GW2WebApi/GW2_WebApi_Coins.m; sourceTree = "<group>"; };
 		FBF94ADE1B1F23E4005E3D45 /* WebSiteForGW2Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSiteForGW2Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF94AE21B1F23E4005E3D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBF94AE31B1F23E4005E3D45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				FB48403E1B2891AB00DF8B7F /* Items */,
 				FBCA3B1C1B26180100AA04A3 /* GW2_WebApi_Gems.h */,
 				FBCA3B1D1B26180100AA04A3 /* GW2_WebApi_Gems.m */,
+				FBEB8D561B6B3E3600C2648B /* GW2_WebApi_Coins.h */,
+				FBEB8D571B6B3E3600C2648B /* GW2_WebApi_Coins.m */,
 				FB48403B1B2888F200DF8B7F /* GW2_WebApi_Items.h */,
 				FB48403C1B2888F200DF8B7F /* GW2_WebApi_Items.m */,
 				FB637D261B2DA9260039740B /* GW2_WebApi_Items_Armor.h */,
@@ -389,6 +394,7 @@
 				FB637D2B1B2DAA100039740B /* Test_Items_ViewController.m in Sources */,
 				FBF94AE71B1F23E4005E3D45 /* AppDelegate.m in Sources */,
 				FB48403D1B2888F200DF8B7F /* GW2_WebApi_Items.m in Sources */,
+				FBEB8D581B6B3E3600C2648B /* GW2_WebApi_Coins.m in Sources */,
 				FBF94AE41B1F23E4005E3D45 /* main.m in Sources */,
 				FB8737211B24D2CC005F1B55 /* WebApi.m in Sources */,
 				FBCA3B1E1B26180100AA04A3 /* GW2_WebApi_Gems.m in Sources */,
