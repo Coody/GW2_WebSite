@@ -77,7 +77,8 @@
                              parameters:tempParams
                                 success:^(NSURLSessionDataTask *task, id responseObject) {
                                     responseBlock(task , responseObject , nil);
-                                } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                                }
+                                failure:^(NSURLSessionDataTask *task, NSError *error) {
                                     responseBlock(task , nil , error);
                                 }];
     
