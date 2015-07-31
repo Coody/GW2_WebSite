@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A7990791B67D99200167484 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5A7990781B67D99200167484 /* README.md */; };
 		70CFDCFCD2BB5A106B8CB658 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B8C9E4E6E7887EA6C7768A /* libPods.a */; };
 		FB2F95951B261C16008D8008 /* Test_Gems_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2F95941B261C16008D8008 /* Test_Gems_ViewController.m */; };
 		FB48403D1B2888F200DF8B7F /* GW2_WebApi_Items.m in Sources */ = {isa = PBXBuildFile; fileRef = FB48403C1B2888F200DF8B7F /* GW2_WebApi_Items.m */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		41E9F89DC9488AA8D951CDA4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		42B8C9E4E6E7887EA6C7768A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A7990781B67D99200167484 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		FB2F95931B261C16008D8008 /* Test_Gems_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test_Gems_ViewController.h; path = TestViewController/Test_Gems_ViewController.h; sourceTree = "<group>"; };
 		FB2F95941B261C16008D8008 /* Test_Gems_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test_Gems_ViewController.m; path = TestViewController/Test_Gems_ViewController.m; sourceTree = "<group>"; };
 		FB48403B1B2888F200DF8B7F /* GW2_WebApi_Items.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GW2_WebApi_Items.h; path = ../../GW2WebApi/GW2_WebApi_Items.h; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		FBF94AE01B1F23E4005E3D45 /* WebSiteForGW2Test */ = {
 			isa = PBXGroup;
 			children = (
+				5A7990781B67D99200167484 /* README.md */,
 				FBF94B071B1F24AB005E3D45 /* WebSite */,
 				FB8F97151B1F3E4700E1DD28 /* TestViewController */,
 				FBF94AE51B1F23E4005E3D45 /* AppDelegate.h */,
@@ -390,6 +393,7 @@
 				FB8737211B24D2CC005F1B55 /* WebApi.m in Sources */,
 				FBCA3B1E1B26180100AA04A3 /* GW2_WebApi_Gems.m in Sources */,
 				FB8F97181B1F46E900E1DD28 /* Test_Demo_ViewController.m in Sources */,
+				5A7990791B67D99200167484 /* README.md in Sources */,
 				FB4840411B2891E300DF8B7F /* GW2_Details_Armor.m in Sources */,
 				FB637D2E1B2DABB70039740B /* GW2_Request_Items.m in Sources */,
 			);
