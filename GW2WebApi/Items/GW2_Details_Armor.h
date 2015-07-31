@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 CoodyChou. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "JSONModel.h"
 
 /*
  For armor, the details object contains the following properties:
@@ -54,7 +54,7 @@
 
 
 #pragma mark - Armor
-@interface GW2_Details_Armor : NSObject
+@interface GW2_Details_Armor : JSONModel
 
 @property (nonatomic , strong) NSString *type;
 @property (nonatomic , strong) NSString *weight_class;

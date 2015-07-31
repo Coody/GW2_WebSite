@@ -32,7 +32,11 @@
 }
 
 +(GW2_WebApi_Items_Result *)parserResponse:(id)responseData{
-    GW2_WebApi_Items_Result *result = [GW2_WebApi_Items_Result new];
+    NSError *error;
+    GW2_WebApi_Items_Result *result = [[GW2_WebApi_Items_Result alloc] initWithData:responseData error:&error];
+    if ( error != nil ) {
+        // TODO: 處理 error
+    }
     result.itemId = responseData;
     return result;
 }

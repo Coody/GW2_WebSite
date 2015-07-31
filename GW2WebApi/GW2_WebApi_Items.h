@@ -8,8 +8,10 @@
 
 #import "WebApi.h"
 
+#import "JSONModel.h"
+
 #pragma mark - Result unit
-@interface GW2_WebApi_Items_Result_Unit : NSObject
+@interface GW2_WebApi_Items_Result_Unit : JSONModel
 
 @property (nonatomic) NSInteger itemId;
 @property (nonatomic , strong) NSString *name;
@@ -82,7 +84,7 @@
 @end
 
 #pragma mark - Result
-@interface GW2_WebApi_Items_Result : NSObject
+@interface GW2_WebApi_Items_Result : JSONModel
 
 @property (nonatomic , strong) NSArray *itemId;
 
