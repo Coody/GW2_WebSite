@@ -11,9 +11,26 @@
 #import "GW2_WebApi_Gems.h"
 #import "GW2_Request_Gems.h"
 
+
+/******************************************************
+ 
+ How to use this Api??
+ 
+ 1. Create request object
+ 2. Init Request ( delegate is necessary!! )
+ 3. Put gems whatever you want
+ 4. Send request
+ 5. Implement request's delegate ( success and fail )
+ 
+ ******************************************************/
+
+
 @interface Test_Gems_ViewController () < BaseViewController_Protocol , GW2_Request_Gems_Protocol >
 {
+    // 1. Create request object
     GW2_Request_Gems *gemsRequest;
+    
+    // you can put gems in textfield
     NSInteger _gem;
 }
 
@@ -41,7 +58,7 @@
     [self createTextFieldWithDefaultText:@"100"];
     [self endAdd];
     
-    // 處理 Request
+    // 2. Init Request ( delegate is necessary!! )
     gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self];
     
 }
@@ -49,10 +66,15 @@
 #pragma mark - Base VC's delegate
 -(void)pressedButtonSend:(NSArray *)sender{
     _gem = [((UITextField *)[sender objectAtIndex:0]).text integerValue];
+    
+    // 3. Put gems whatever you want
     [gemsRequest setGems:_gem];
+    
+    // 4. Send request
     [gemsRequest sendRequest];
 }
 
+// 5. Implement request's delegate ( success and fail )
 #pragma mark - Request's delegate
 -(void)gotGemsRequestSuccessWithDic:(GW2_WebApi_Gems_Result *)tempGemsResult{
     NSString *resultString = [NSString stringWithFormat:@"{ 1 Gem = %.4f 金 ,\n  %ld Gem 可以換成 %.4f 金 }" , (float)tempGemsResult.coins_per_gem/10000.0f , (long)_gem , (float)tempGemsResult.quantity/10000.0f];

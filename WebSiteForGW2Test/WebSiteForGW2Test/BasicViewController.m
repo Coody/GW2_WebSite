@@ -95,19 +95,19 @@
 }
 
 -(void)createResultAlertWithString:(NSString *)tempString{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"結果："
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Result："
                                                     message:tempString
                                                    delegate:nil
-                                          cancelButtonTitle:@"確定"
+                                          cancelButtonTitle:@"Confirm"
                                           otherButtonTitles:nil];
     [alert show];
 }
 
 -(void)createErrorResultAlertWithString:(NSString *)tempString withErrorCode:(NSInteger)tempErrorCode{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"錯誤!（code:%ld）" , (long)tempErrorCode]
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"Error!（code:%ld）" , (long)tempErrorCode]
                                                     message:tempString
                                                    delegate:nil
-                                          cancelButtonTitle:@"確定"
+                                          cancelButtonTitle:@"Confirm"
                                           otherButtonTitles:nil];
     [alert show];
 }
