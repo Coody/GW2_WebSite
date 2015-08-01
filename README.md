@@ -46,7 +46,7 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 
 
 2. 回傳結果使用 JSONModel 來處理，因此請將接收參數定義為同名、或是使用 JSONModel 的 KeyMapping 來對應回傳參數命名。
-``詳細請看：https://github.com/icanzilb/JSONModel``
+``詳細請看：[JSONModel][]``
 
 3. 如果此 WebApi 有傳送參數，請建立類別方法來加入參數，如：
 ```
@@ -92,8 +92,8 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 請去 AppDelegate 將初始 ViewController 替換掉。
 
 ### 第三方 Framework
-- AFNetworking : https://github.com/Coody/AFNetworking
-- JSONModel : https://github.com/icanzilb/JSONModel
+- [AFNetworking][]
+- [JSONModel][]
 
 
 如果有任何問題，請來信：coody0829@gmail.com
@@ -101,3 +101,6 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 ### License
 
 GW2_WebSite is available under the MIT license.
+
+[JSONModel]: https://github.com/icanzilb/JSONModel
+[AFNetworking]: https://github.com/Coody/AFNetworking
