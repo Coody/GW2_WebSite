@@ -90,7 +90,7 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 
 請去 AppDelegate 將初始 ViewController 替換掉。
 
-![demo]demo.png
+![demo](demo.png)
 
 ### 第三方 Framework
 - [AFNetworking][]
