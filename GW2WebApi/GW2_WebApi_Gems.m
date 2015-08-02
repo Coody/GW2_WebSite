@@ -9,8 +9,8 @@
 #import "GW2_WebApi_Gems.h"
 
 // {"coins_per_gem":1340,"quantity":134015}
-NSString *const GW2_KEY_Coins_Per_Gem = @"coins_per_gem";
-NSString *const GW2_KEY_Quantity = @"quantity";
+//NSString *const GW2_KEY_Coins_Per_Gem = @"coins_per_gem";
+//NSString *const GW2_KEY_Quantity = @"quantity";
 
 #pragma mark - Gems_Result class
 @implementation GW2_WebApi_Gems_Result
@@ -34,7 +34,7 @@ NSString *const GW2_KEY_Quantity = @"quantity";
                                                                                      error:&error];
     
     if ( error != nil ) {
-        NSLog(@"error = %@" , error.description);
+        NSLog(@"%@ : %@ , error description: %@" , NSStringFromClass([self class]) , NSStringFromSelector(_cmd) , error.description );
     }
     return gemResult;
 }

@@ -11,10 +11,17 @@
 #import "GW2_WebApi_Gems.h"
 #import "GW2_Request_Gems.h"
 
-@interface Test_Gems_ViewController () < BaseViewController_Protocol , GW2_Request_Gems_Protocol >
+#import "GW2_WebApi_Coins.h"
+#import "GW2_Request_Coins.h"
+
+@interface Test_Gems_ViewController () < BaseViewController_Protocol ,
+                                         GW2_Request_Gems_Protocol ,
+                                         GW2_Request_Coins_Protocol >
 {
     GW2_Request_Gems *gemsRequest;
+    GW2_Request_Coins *coinsRequest;
     NSInteger _gem;
+    NSInteger _gold;
 }
 
 @end
@@ -37,20 +44,24 @@
     self.delegate = self;
     
     // 顯示介面
-    [self createLabelWithText:@"輸入你想用多少 Gem 換成金？"];
+    [self createLabelWithText:@"輸入你想用多少 Gold 換成 Gems？"];
     [self createTextFieldWithDefaultText:@"100"];
     [self endAdd];
     
     // 處理 Request
     gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self];
+    coinsRequest = [[GW2_Request_Coins alloc] initWithDelegate:self];
     
 }
 
 #pragma mark - Base VC's delegate
 -(void)pressedButtonSend:(NSArray *)sender{
-    _gem = [((UITextField *)[sender objectAtIndex:0]).text integerValue];
-    [gemsRequest setGems:_gem];
-    [gemsRequest sendRequest];
+//    _gem = [((UITextField *)[sender objectAtIndex:0]).text integerValue];
+//    [gemsRequest setGems:_gem];
+//    [gemsRequest sendRequest];
+    _gold = [((UITextField *)[sender objectAtIndex:0]).text integerValue];
+    [coinsRequest setGold:_gold];
+    [coinsRequest sendRequest];
 }
 
 #pragma mark - Request's delegate
@@ -60,6 +71,17 @@
 }
 
 -(void)gotGemsRequestFailWithErrorMsg:(NSString *)tempErrorMsg withErrorCode:(NSInteger)tempErrorCode{
+    [self createErrorResultAlertWithString:tempErrorMsg
+                             withErrorCode:tempErrorCode];
+}
+
+#pragma mark - Request's delegate
+-(void)gotCoinsRequestSuccessWithDic:(GW2_WebApi_Coins_Result *)tempCoinsResult{
+    NSString *resultString = [NSString stringWithFormat:@"{ 1 金 = %.4f Gems ,\n  %ld 金 可以換成 %lld Gems }" , (float)tempCoinsResult.coins_per_gem/10000.0f , (long)_gold , tempCoinsResult.quantity];
+    [self createResultAlertWithString:resultString];
+}
+
+-(void)gotCoinsRequestFailWithErrorMsg:(NSString *)tempErrorMsg withErrorCode:(NSInteger)tempErrorCode{
     [self createErrorResultAlertWithString:tempErrorMsg
                              withErrorCode:tempErrorCode];
 }
