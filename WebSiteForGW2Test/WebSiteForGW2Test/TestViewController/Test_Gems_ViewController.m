@@ -59,7 +59,7 @@
     self.delegate = self;
     
     // 顯示介面
-    [self createLabelWithText:@"輸入你想用多少 Gold 換成 Gems？"];
+    [self createLabelWithText:@"How much golds you wanna exchange to gems？"];
     [self createTextFieldWithDefaultText:@"100"];
     [self endAdd];
     
