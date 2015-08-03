@@ -88,7 +88,7 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 
 - 請繼承 BasicViewController ，並且直接 create Label , 以及 create TextField，測試案例請看 Test_ViewController_Gems 或是 Text_ViewController_Demo 。
 
-請去 AppDelegate 將初始 ViewController 替換掉。
+- 請去 AppDelegate 將初始 ViewController 替換掉。
 
 ![demo](demo.png)
 
