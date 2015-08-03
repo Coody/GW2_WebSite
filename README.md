@@ -97,8 +97,6 @@ GW2_Request_Gems *gemsRequest = [[GW2_Request_Gems alloc] initWithDelegate:self]
 - [JSONModel][]
 
 
-如果有任何問題，請來信：coody0829@gmail.com
-
 ### License
 
 GW2_WebSite is available under the MIT license.
