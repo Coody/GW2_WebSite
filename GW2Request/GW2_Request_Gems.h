@@ -8,7 +8,7 @@
 
 #import "WebSiteRequest.h"
 
-@class GW2_WebApi_Gems_Result;
+#import "GW2_WebApi_Gems.h"
 
 @protocol GW2_Request_Gems_Protocol <NSObject>
 

@@ -7,7 +7,6 @@
 //
 
 #import "GW2_Request_Gems.h"
-#import "GW2_WebApi_Gems.h"
 
 
 #pragma mark - Interface
