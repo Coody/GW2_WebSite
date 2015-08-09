@@ -21,12 +21,14 @@
 }
 
 -(void(^)(NSURLSessionDataTask *task, id responseObject , NSError *error))responseBlock{
+    __weak __typeof(self) weakSelf = self;
     return ^(NSURLSessionDataTask *task, id responseObject , NSError *error){
+        __strong __typeof(weakSelf) strongSelf = weakSelf;
         if ( error != nil ) {
-            [_delegate gotItemIdsFailWithErrorMsg:error.description withErrorCode:error.code];
+            [strongSelf->_delegate gotItemIdsFailWithErrorMsg:error.description withErrorCode:error.code];
         }
         else{
-            [_delegate gotItemIdsSuccessWithArray:[GW2_WebApi_Items parserResponse:responseObject]];
+            [strongSelf->_delegate gotItemIdsSuccessWithArray:[GW2_WebApi_Items parserResponse:responseObject]];
         }
     };
 }

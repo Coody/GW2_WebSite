@@ -29,13 +29,15 @@
 }
 
 -(void(^)(NSURLSessionDataTask *task, id responseObject , NSError *error))responseBlock{
+    __weak __typeof(self) weakSelf = self;
     return ^(NSURLSessionDataTask *task, id responseObject , NSError *error){
+        __strong __typeof(weakSelf) strongSelf = weakSelf;
         if ( error != nil ) {
             // TODO: 處理錯誤
-            [_delegate gotGemsRequestFailWithErrorMsg:error.description withErrorCode:error.code];
+            [strongSelf->_delegate gotGemsRequestFailWithErrorMsg:error.description withErrorCode:error.code];
         }
         else{
-            [_delegate gotGemsRequestSuccessWithDic:[GW2_WebApi_Gems parserResponse:responseObject]];
+            [strongSelf->_delegate gotGemsRequestSuccessWithDic:[GW2_WebApi_Gems parserResponse:responseObject]];
         }
     };
 }
