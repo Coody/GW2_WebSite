@@ -84,7 +84,7 @@
 @end
 
 #pragma mark - Result
-@interface GW2_WebApi_Items_Result : JSONModel
+@interface GW2_WebApi_Items_Result : NSObject
 
 @property (nonatomic , strong) NSArray *itemId;
 

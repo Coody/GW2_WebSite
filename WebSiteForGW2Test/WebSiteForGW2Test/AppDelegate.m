@@ -35,7 +35,7 @@
     /**/
     [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleDefault];
     
-    Test_Gems_ViewController *test = [[Test_Gems_ViewController alloc] init];
+    Test_Items_ViewController *test = [[Test_Items_ViewController alloc] init];
     
     self.window.rootViewController = test;
     
