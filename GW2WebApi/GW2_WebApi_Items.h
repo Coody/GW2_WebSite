@@ -13,25 +13,23 @@
 #pragma mark - Result unit
 @interface GW2_WebApi_Items_Result_Unit : JSONModel
 
+// TODO: JSONModel key mapping
 @property (nonatomic) NSInteger itemId;
 @property (nonatomic , strong) NSString *name;
 @property (nonatomic , strong) NSString *icon;
+// TODO: JSONModel key mapping
 @property (nonatomic , strong) NSString *gw2_description;
-
-/** 
+/**
  * @details - armor , back , bag , consumable , container , craftingMaterial , gathering , gizmo , miniPet , tool , trait , trinket , trophy , upgradeComponent , weapon
  */
 @property (nonatomic , strong) NSString *type;
-
 /**
  * @details - Junk , basic , fine , masterwork , rare , exotic , ascended , legendary
  */
 @property (nonatomic , strong) NSString *rarity;
-
 @property (nonatomic) NSInteger level;
 @property (nonatomic) NSInteger vendor_value;
 @property (nonatomic) NSInteger default_skin;
-
 /** 
  * @details - AccountBindOnUse , AccountBound , HideSuffix , MonsterOnly , NoMysticForge , NoSalvage , NoSell , NotUpgradeable , NoUnderwater , SoulbindOnAcquire , SoulBindOnUse , Unique
  */
