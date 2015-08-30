@@ -47,6 +47,14 @@
 
 @implementation GW2_WebApi_Items_Result_Unit
 
++(JSONKeyMapper*)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{
+                                                       @"id": @"itemId",
+                                                       @"description": @"gw2_description"
+                                                       }];
+}
+
 @end
 
 

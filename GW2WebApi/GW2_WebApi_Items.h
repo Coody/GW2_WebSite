@@ -8,16 +8,16 @@
 
 #import "WebApi.h"
 
+#import "GW2_Details_Armor.h"
+
 #import "JSONModel.h"
 
 #pragma mark - Result unit
 @interface GW2_WebApi_Items_Result_Unit : JSONModel
 
-// TODO: JSONModel key mapping
 @property (nonatomic) NSInteger itemId;
 @property (nonatomic , strong) NSString *name;
 @property (nonatomic , strong) NSString *icon;
-// TODO: JSONModel key mapping
 @property (nonatomic , strong) NSString *gw2_description;
 /**
  * @details - armor , back , bag , consumable , container , craftingMaterial , gathering , gizmo , miniPet , tool , trait , trinket , trophy , upgradeComponent , weapon
@@ -45,6 +45,10 @@
  */
 @property (nonatomic , strong) NSArray *restrictions;
 
+/**
+ * @details - details (object, optional) – Additional item details if applicable, depending on the item type (see below).
+ */
+@property (nonatomic , strong) id details;
 
 /*
  For each requested item id, an object with the following properties is returned:
