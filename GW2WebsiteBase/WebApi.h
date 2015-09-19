@@ -14,7 +14,6 @@
 @protocol WebApi_Policy <NSObject>
 
 @required
-
 /**
  * @brief   - 請實作這個 WebApi 是要詢問什麼東西
  * @details - exp: 如果是物品，請裡面直接寫 
@@ -26,6 +25,6 @@
 
 @interface WebApi : NSObject
 
-+(NSString *)getGW2_Tail_Request_Url_WithClass:(Class <WebApi_Policy> )tempClass;
+//+(NSString *)getGW2_Tail_Request_Url_WithClass:(Class <WebApi_Policy> )tempClass;
 
 @end

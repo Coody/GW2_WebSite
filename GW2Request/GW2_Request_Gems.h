@@ -20,7 +20,7 @@
 
 @end
 
-@interface GW2_Request_Gems : WebSiteRequest
+@interface GW2_Request_Gems : WebSiteRequest < WebSiteRequest_Policy >
 
 -(void)setGems:(NSInteger)tempGems;
 -(id)initWithDelegate:( id < GW2_Request_Gems_Protocol > ) tempDelegate;

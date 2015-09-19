@@ -38,15 +38,18 @@ typedef void(^URLSessionDataTaskHandler)(NSURLSessionDataTask *task, id response
 
 
 #pragma mark - WebSiteRequest
+@protocol WebSiteRequest_Policy <NSObject>
+@required
+/** 送出請求 */
+- (void) sendRequest;
+@optional
+/** 中斷請求 */
+- (void) terminateRequest;
+@end
+
 @interface WebSiteRequest : NSObject
 
 @property (nonatomic, strong) NSDictionary* params;
-
-/** 送出請求 */
-- (void) sendRequest;
-
-/** 中斷請求 */
-- (void) terminateRequest;
 
 @end
 

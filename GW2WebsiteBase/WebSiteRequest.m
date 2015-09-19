@@ -89,14 +89,5 @@
 
 #pragma mark - WebSiteRequest
 @implementation WebSiteRequest
-
--(void)sendRequest{
-    
-}
-
--(void)terminateRequest{
-    // ?
-}
-
 @end
 

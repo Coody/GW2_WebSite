@@ -20,7 +20,7 @@
 
 @end
 
-@interface GW2_Request_Items : WebSiteRequest
+@interface GW2_Request_Items : WebSiteRequest <WebSiteRequest_Policy>
 
 @property (nonatomic , weak) id < GW2_Request_Items_Protocol >delegate;
 

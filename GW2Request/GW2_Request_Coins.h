@@ -24,7 +24,7 @@
 
 
 #pragma mark - Request
-@interface GW2_Request_Coins : WebSiteRequest
+@interface GW2_Request_Coins : WebSiteRequest <WebSiteRequest_Policy>
 
 -(id)initWithDelegate:(id)tempDelegate;
 -(void)setGold:(NSInteger)tempGolds;

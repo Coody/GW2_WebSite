@@ -15,16 +15,16 @@
 
 @implementation WebApi
 
-+(NSString *)getGW2_Tail_Request_Url_WithClass:(Class<WebApi_Policy>)tempClass
-{
-    
-    NSMutableString *tailUrl = [[NSMutableString alloc] init];
-    
-    // 加入 Uri
-    if ( [tempClass uri] ) {
-        [tailUrl appendFormat:@"/%@",[tempClass uri]];
-    }
-    return tailUrl;
-}
+//+(NSString *)getGW2_Tail_Request_Url_WithClass:(Class<WebApi_Policy>)tempClass
+//{
+//    
+//    NSMutableString *tailUrl = [[NSMutableString alloc] init];
+//    
+//    // 加入 Uri
+//    if ( [tempClass uri] ) {
+//        [tailUrl appendFormat:@"/%@",[tempClass uri]];
+//    }
+//    return tailUrl;
+//}
 
 @end
